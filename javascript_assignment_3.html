@@ -6,6 +6,9 @@
     <title>Assignment 3</title>
   </head>
   <body>
+    <h3>Name starting at B</h3>
+    <ul id="result_list"></ul>
+
     <script>
       const people = [
         "Alice Anderson",
@@ -36,21 +39,13 @@
         return item.charAt(0) === chosenLetter;
       })
 
-      console.log('Names starting at', chosenLetter)
+      const ul = document.getElementById("result_list");
+
       result.forEach(function(nameChosen){
-        console.log(nameChosen)
+        const li = document.createElement("li");
+        li.textContent = nameChosen;
+        ul.appendChild(li);
       });
-
-
-
-
-    //   const result = people.filter(function(item){
-    //     return item.charAt(0) === chosenLetter;
-    //   });
-
-   
-    //   console.log('Names starting with', chosenLetter);
-    //   console.log(result);
     </script>
   </body>
 </html>
