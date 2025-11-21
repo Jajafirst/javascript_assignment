@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2s</title>
+  </head>
+  <body>
+    <h3>Today Fruits</h3>
+    <ul id="fruit_list"></ul>
+    <hr />
+    <h3>Today Vegetables</h3>
+    <ul id="veg_list"></ul>
+
+    <script>
+      var fruit_lists = ["Apple", "Banna", "Orange", "Mango", "Strawberry"];
+      var veg_lists = ["Carrot", "Broccoli", "Spinach", "Tomato", "Cucumber"];
+
+      var fruit_list = document.getElementById("fruit_list");
+      var veg_list = document.getElementById("veg_list");
+
+      fruit_lists.forEach(function(item) {
+        document.getElementById("fruit_list").innerHTML += `<li>${item}</li>`;
+      });
+
+      veg_lists.forEach(function(item){
+        document.getElementById("veg_list").innerHTML += `<li>${item}</li>`;
+      });
+    </script>
+  </body>
 </html>

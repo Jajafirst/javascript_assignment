@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webform Asssignment</title>
+  </head>
+  <body>
+    <form
+      action="https://athiphat-mybackend-01.southeastasia.cloudapp.azure.com/api/product"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <fieldset>
+        <legend>General Info</legend>
+
+        <label for="itemName">Item Name</label>
+        <input
+          type="text"
+          id="itemName"
+          name="itemName"
+          size="50"
+          maxlength="500"
+          style="width: 60%"
+        />
+
+        <br />
+
+        <label for="itemDescription">Description</label>
+        <textarea
+          name="itemDescription"
+          id="itemDescription"
+          rows="5"
+          cols="37"
+          style="margin-top: 10px"
+        ></textarea>
+
+        <br />
+
+        <label for="coverImage">Cover Image</label>
+        <input
+          type="file"
+          id="coverImage"
+          name="coverImage"
+          style="margin-top: 10px"
+        />
+
+        <br />
+
+        <label for="category">Category</label>
+        <select name="category" id="category" style="margin-top: 10px">
+          <option value="notSpecified">notSpecified</option>
+          <option value="consumption">consumption</option>
+          <option value="household">household</option>
+          <option value="electronic">electronic</option>
+          <option value="gadget">gadget</option>
+        </select>
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Misc.</legend>
+
+        <label for="inventoryAmount">Inventory Amount</label>
+        <input
+          type="number"
+          id="inventoryAmount"
+          name="inventoryAmount"
+          style="margin-top: 10px"
+        />
+
+        <br />
+
+        <label for="listPrice">ListPrice</label>
+
+        <input
+          type="number"
+          id="listPrice"
+          name="listPrice"
+          style="margin-top: 10px"
+        />
+
+        <br />
+
+        <span style="margin-top: 15px; display: block"
+          ><strong>Available Store</strong></span
+        >
+        <br />
+
+        <input type="checkbox" name="availableStore[]" value="Bangkok" />
+        <label for="availableStore">Bangkok</label>
+
+        <input type="checkbox" name="availableStore[]" value="Pattaya" />
+        <label for="availableStore">Pattaya</label>
+
+        <input type="checkbox" name="availableStore[]" value="Phuket" />
+        <label for="availableStore">Phuket</label>
+
+        <span style="margin-top: 15px; display: block"
+          ><strong>Active Status</strong></span
+        >
+        <br />
+
+        <input type="radio" name="status" value="active" />
+        <label for="status">Active</label>
+
+        <input type="radio" name="status" value="inactive" />
+        <label for="status">Inactive</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Staff</legend>
+        <label for="staffEmail">Staff Email</label>
+        <input type="email" id="staffEmail" name="staffEmail">
+      </fieldset>
+
+      <button type="submit" style="margin-top: 10px;">Submit Form</button>
+    </form>
+  </body>
+</html>
